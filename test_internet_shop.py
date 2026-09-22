@@ -14,6 +14,9 @@ class Test_autorization(unittest.TestCase):
     def setUp(self):
         
         options_browser = Options()
+        
+        options_browser.add_argument("--headless")
+        
         self.driver = webdriver.Chrome(options = options_browser)
         self.driver.get('https://www.saucedemo.com/')
 
@@ -105,6 +108,10 @@ class TestProducts(unittest.TestCase):
     def setUp(self):
         
         options_browser = Options()
+        
+        options_browser = Options()
+                
+        options_browser.add_argument("--headless")
         self.driver = webdriver.Chrome(options = options_browser)
         
         self.driver.get('https://www.saucedemo.com/')
